@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { BlogPost } from 'src/app/blog-post';
 
 @Component({
   selector: 'app-blog-post-tile',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogPostTileComponent implements OnInit {
 
+ @Input() post: BlogPost;
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
