@@ -7,11 +7,14 @@ import { map } from 'rxjs/operators';
 })
 export class DataService {
   endpoint = 'http://jsonplaceholder.typicode.com/posts';
+  post: any;
   constructor(public http: Http) {
     console.log('comes from data service');
    }
   getPosts() {
     return this.http.get(this.endpoint)
-      .pipe(map(res => res.json()));
+      .subscribe(post => {
+        console.log('We got', post);
+      });
   }
 }

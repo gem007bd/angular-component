@@ -10,6 +10,7 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { DataService } from './data.service';
+import { BlogDataService } from './services/blog-data.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DataService } from './data.service';
   ],
   providers: [
     TruncatePipe,
-    DataService
+    DataService,
+    BlogDataService
   ],
   bootstrap: [AppComponent]
 })
