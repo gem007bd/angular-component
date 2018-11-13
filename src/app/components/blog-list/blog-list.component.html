@@ -1,14 +1,21 @@
 <!-- hightlight is a directive which will heighlight the div -->
-<a hightlight href="#" (click)="expandAll()">Expand All</a> | 
-
+<p>
+    <a hightlight href="#" (click)="expandAll()">Expand All</a>
+</p>
 <!-- <a href="#" (click)="favoriteAll()">Favoriate All</a> -->
 
-
-<app-blog-post-tile #tile
+<app-blog-post-tile 
+#tile
 *ngFor="let post of blogPosts[currentPage]"
-[(post)]="post"></app-blog-post-tile>
+[(post)]="post">
+</app-blog-post-tile>
 
 <app-paginator 
     [numberOfPages]="blogPosts.length" 
     (pageNumberClick)="updatePage($event)">
 </app-paginator>
+
+<app-card>
+    <h1>Headingg</h1>
+    <p>para</p>
+</app-card>
