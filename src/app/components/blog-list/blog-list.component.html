@@ -1,4 +1,9 @@
-<a href="#" (click)="expandAll()">Expand All</a>
+<!-- hightlight is a directive which will heighlight the div -->
+<a hightlight href="#" (click)="expandAll()">Expand All</a> | 
+
+<!-- <a href="#" (click)="favoriteAll()">Favoriate All</a> -->
+
+
 <app-blog-post-tile #tile
 *ngFor="let post of blogPosts[currentPage]"
 [(post)]="post"></app-blog-post-tile>

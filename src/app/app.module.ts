@@ -11,6 +11,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { DataService } from './data.service';
 import { BlogDataService } from './services/blog-data.service';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BlogDataService } from './services/blog-data.service';
     BlogPostTileComponent,
     BlogListComponent,
     TruncatePipe,
-    PaginatorComponent
+    PaginatorComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

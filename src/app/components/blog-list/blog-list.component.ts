@@ -4,6 +4,7 @@ import { DataService } from 'src/app/data.service';
 import { longStackSupport } from 'q';
 import { BlogPostTileComponent } from '../blog-post-tile/blog-post-tile.component';
 import { BlogDataService } from 'src/app/services/blog-data.service';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-blog-list',
@@ -24,7 +25,7 @@ export class BlogListComponent implements OnInit {
   ngOnInit() {
     this.currentPage = 0;
     this.blogPosts = this.blogDataService.getData();
-     this.apiPosts = this.dataService.getPosts();
+    this.apiPosts = this.dataService.getPosts();
   }
 
   /**
@@ -38,5 +39,15 @@ export class BlogListComponent implements OnInit {
     this.blogPostTileComponets
     .forEach(e => e.showFullSummary());
   }
+  // not working for this tutorial -> have to see myself
+  // favoriteAll() {
+  //   this.blogPosts(this.currentPage) =
+  //   this.blogPosts(this.currentPage)
+  //   .map(post => ({
+  //     title: post.title,
+  //     summary: post.summary,
+  //     isFav: true
+  //   }));
+  // }
 
 }
